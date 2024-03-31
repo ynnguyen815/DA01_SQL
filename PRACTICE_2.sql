@@ -13,8 +13,12 @@ SELECT ROUND(AVG(Salary)) - ROUND(AVG(REPLACE(Salary, "0", "")))
 FROM EMPLOYEES;
 
 
-/* Exercise 4 */
+/* Exercise 4:You're trying to find the mean number of items per order on Alibaba, rounded to 1 decimal place using tables which includes information on the count of items in each order (item_count table) and the corresponding number of orders for each item count (order_occurrences table). */
+SELECT 
+SUM(order_occurrences) AS TOTAL_ORDERS
+FROM items_per_order 
 
+WHERE TOTAL_ITEMS % TOTAL_ORDER
 
 /* Exercise 5 */
 
